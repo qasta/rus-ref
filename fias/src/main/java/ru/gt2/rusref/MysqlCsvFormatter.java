@@ -24,7 +24,7 @@ public class MysqlCsvFormatter implements Function<Object, String> {
         if (null == input) {
             return "\\N";
         } else if (input instanceof String) {
-            // FIXME Тут нужен escap'инг.
+            // FIXME Просто и наивное экранирование
             String string = (String) input;
             if (escape.matchesAnyOf(string)) {
                 StringBuilder escaped = new StringBuilder();
