@@ -1,6 +1,5 @@
 package ru.gt2.rusref;
 
-import com.google.common.base.CharMatcher;
 import com.google.common.base.Charsets;
 import com.google.common.base.Function;
 import com.google.common.base.Joiner;
@@ -38,6 +37,8 @@ public class CsvWriter implements Closeable {
         writer.write(line);
         writer.write(lineSeparator);
     }
+
+    // mysqlimport  --user=root --fields-terminated-by=\\t --fields-optionally-enclosed-by=\" --fields-escaped-by=\\ --local fias StructureStatus.csv ActualStatus.csv IntervalStatus.csv EstateStatus.csv CenterStatus.csv OperationStatus.csv HouseStateStatus.csv CurrentStatus.csv AddressObjectType.csv NormativeDocument.csv AddressObject.csv Landmark.csv HouseInterval.csv House.csv
 
     public static CsvWriter createMySqlCsvWriter(File file) throws FileNotFoundException {
         CsvWriter result = new CsvWriter();
