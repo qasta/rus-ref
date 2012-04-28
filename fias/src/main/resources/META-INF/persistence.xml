@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <persistence-unit name="rusref.fias" transaction-type="RESOURCE_LOCAL">
+        <class>ru.gt2.rusref.fias.HouseInterval</class>
+        <class>ru.gt2.rusref.fias.CurrentStatus</class>
+        <class>ru.gt2.rusref.fias.AddressObjectType</class>
+        <class>ru.gt2.rusref.fias.House</class>
+        <class>ru.gt2.rusref.fias.AddressObject</class>
+        <class>ru.gt2.rusref.fias.EstateStatus</class>
+        <class>ru.gt2.rusref.fias.StructureStatus</class>
+        <class>ru.gt2.rusref.fias.OperationStatus</class>
+        <class>ru.gt2.rusref.fias.NormativeDocument</class>
+        <class>ru.gt2.rusref.fias.ActualStatus</class>
+        <class>ru.gt2.rusref.fias.IntervalStatus</class>
+        <class>ru.gt2.rusref.fias.HouseStateStatus</class>
+        <class>ru.gt2.rusref.fias.Landmark</class>
+        <class>ru.gt2.rusref.fias.CenterStatus</class>
+        <class>ru.gt2.rusref.fias.AbstractHouse</class>
+        <class>ru.gt2.rusref.fias.AbstractAddressObject</class>
+        <class>ru.gt2.rusref.fias.AddressObjectLevel</class>
+        <class>ru.gt2.rusref.fias.AddressObjectGuid</class>
+        <class>ru.gt2.rusref.fias.NormativeDocumentType</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://rsl/fias" />
+            <property name="javax.persistence.jdbc.user" value="fias" />
+            <property name="javax.persistence.jdbc.password" value="NnZ5YbRpzHWAebx4" />
+
+            <!--
+            <property name="openjpa.Log" value="SQL=TRACE, SQLDiag=TRACE, MetaData=TRACE, RunTime=TRACE" />
+            -->
+            <property name="openjpa.DynamicEnhancementAgent" value="false" />
+            <property name="openjpa.jdbc.MappingDefaults" value="FieldStrategies='java.util.UUID=ru.gt2.rusref.openjpa.UUIDValueHandler'" />
+        </properties>
+    </persistence-unit>
+</persistence>
